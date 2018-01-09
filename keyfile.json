@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "exalted-cairn-138117",
+  "private_key_id": "2ace69cd22fea79bdd6d8ddebc807156f9c6fa4e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC1gs7siSiFZijE\njePJaA7oZsM2BTP0mPVKGqE1ikAp5ZfQ0YVYuLCXWB/5AF4f5LQtOkT5fXMwp2Y8\nPlrR9gVcFl+2RrqkpNjXimD7gMe6zb41r2ojZ2GszPAeMCwt1JhCxUUA2doP6phG\nehEyq8uFnWwm248hXIs38QYBVFKlgmmrK45ik2BLTyL+GFLUtQ7sDZyCoEr7Gmyh\n4JHiy2eY/6BFvL5MGVYoHbp2eGu7qzs8g4Hn75GCD3XBanoRzlVayOACZLagnZPB\neNB7Tpn8gLVH2SoKDTSLF0TVJCSTXN+Il00CZkbjvjTZyNj9eOaDg21WWUIU91ZJ\nqMh6bc4tAgMBAAECggEAD4cZuZ2ANG1JZos25ed7gwEriQcH61Bch5LgoKprk8n6\n41fRPwZJwSC+V3hjFPplOYtHFErZnFttwRCah2SzD64wUPEbDXO2wzWo10ssivwH\n3iLcAxxYfEZp8kMvvFn4Dpo+rXR1la/9h+Xwa7PLrOoLMwXMaE+47ze0yk9S5Kqv\nCp5FFBMK13H21L0/wYtpkx4E8AFtDuluz3c1z/MZEmxnN9OXGKaM27GCM2Xqt8hg\n329A3K8p7KN6coRA6QysaSQyXh0g24OoOBB2Opq9Yx8btcLrhVNL6WWN6Bnba9JT\ntYtmm3UJ3yP0wDQcHcsU+HweWgDraQWZfWiU4dNUZwKBgQDYoT4OGHn2+mQxMKcX\nM3wRNDN7fEc/aSjXfTGbeeo5VH3wNUfkB1ekuPGcGonD02/J8mXjEQVbZb6XhPN3\n4IN4g+1Gcch9XilOsP4zHTrPZviggA9/HDDN3Xi4ENB9MfgIIqH0W1W7ZvPTehnr\nWzE1zYLtNmMZPpaKssWUte8bawKBgQDWf6axv2ug3RV8/dzJzjypT9qsp+dYfnJc\nL3s9CleOf28BfZ5W49tPBegFBXeckvSRsdo1+zEMxfmPT5Z492+NpfMdcX4FIXaW\nfbz4Ul3atXjK1oHxmgMoHQjQCq3D7vSU69rmx6Ml85A8Vc3TivvVt2P7J1LPaZby\n8vXRmZv6xwKBgQC84Wov9BtzwsJVOWyXCCbnATLaOnQMz+3yZZA5VcVpk0fzhyFV\nqyk50J+pUmJIQjS4SgeYQiD/nejeR+fY4AMBs1XRFCiRVuaBXEVn39aFO+0QVFgu\npi/Pb4lwRAjlAAqZXUkEvBY2Pf/ephmvYmW32aaMmd0yB6ZO7KzlivQeXQKBgQC5\ng3O/XWgPm8ae8MzI+Qb8BGWDWEA9CDeORT6X/17UjqCKMIQGcFFX2ireVOkrUOoX\nLDQm5dZ5TqxVZycj/hTL9I/8khDFDTkMVTlfp5UmuDb9b2K5e1NpmRrrG6FHyV5d\nglMzr8wJ4cqIdElswVKnd1IQgOUdIBx+iOVT3z/JNwKBgQCaxKs3JYavjP+Tk9IO\n5VlbfNKmWPRpClKEVn+VqYPKuf81O9eSOga9ODgSITnS8HlauF5q1TLriyRYYwJF\nk3wSrU+urlIwyJElSS4LOsVDeGBI3pY+VIEXvi9ohABnH9GXnWKYQlTk+AbDvDAF\nZdz2pEHdjFyC3fuuBs5R5Wug6w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "airbrb@exalted-cairn-138117.iam.gserviceaccount.com",
+  "client_id": "111063265052176411280",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/airbrb%40exalted-cairn-138117.iam.gserviceaccount.com"
+}
