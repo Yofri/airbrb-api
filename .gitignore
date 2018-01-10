@@ -81,3 +81,6 @@ typings/
 !.vscode/launch.json
 !.vscode/extensions.json
 .history
+
+### Google Cloud Platform
+keyfile.json
