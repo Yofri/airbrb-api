@@ -2,8 +2,8 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 
 dotenv.config()
-mongoose.connect('mongodb://localhost/airbrb')
-// mongoose.connect(process.env.MLAB_URI)
+// mongoose.connect('mongodb://localhost/airbrb')
+mongoose.connect(process.env.MLAB_URI)
 mongoose.Promise = global.Promise
 const connection = mongoose.connection
 
