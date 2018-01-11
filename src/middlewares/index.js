@@ -1,3 +1,4 @@
+import gcs from './gcs'
 import multer from './multer'
 
-export {multer}
+export {gcs, multer}
