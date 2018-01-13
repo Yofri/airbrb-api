@@ -1,8 +1,7 @@
-import mongoose from 'mongoose'
-import isEmail from 'validator/lib/isEmail'
-import isMobilePhone from 'validator/lib/isMobilePhone'
+const mongoose = require('mongoose')
+const {isEmail, isMobilePhone} = require('validator')
 
-export default mongoose.model('users', {
+module.exports = mongoose.model('users', {
   name: {
     type: String,
     required: true,
@@ -24,14 +23,11 @@ export default mongoose.model('users', {
     lowercase: true,
     unique: true,
     trim: true,
-    validate: {
-      validator: isEmail,
-      message: '{VALUE} is not a valid email address'
-    }
+    validate: [isEmail, 'Invalid email address']
   },
   password: {
     type: String,
     required: true,
-    minlength: 8
+    minlength: [8, 'Min. 8 characters']
   }
 })

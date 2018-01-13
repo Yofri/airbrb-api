@@ -8,7 +8,7 @@ import {
   createAds, updateAds, removeAds
 } from './mutations'
 
-export default new GraphQLSchema({
+module.exports = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: 'Query',
     fields: {

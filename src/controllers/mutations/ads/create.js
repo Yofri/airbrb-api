@@ -10,9 +10,9 @@ export default {
     title: {type: new GraphQLNonNull(GraphQLString)},
     price: {type: new GraphQLNonNull(GraphQLString)},
     address: {type: new GraphQLNonNull(GraphQLString)},
+    specification: {type: GraphQLString},
     latitude: {type: new GraphQLNonNull(GraphQLString)},
     longitude: {type: new GraphQLNonNull(GraphQLString)},
-    specification: {type: GraphQLString},
     photos: {type: new GraphQLList(
       new GraphQLNonNull(GraphQLString)
     )}

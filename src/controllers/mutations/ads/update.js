@@ -10,14 +10,12 @@ export default {
     title: {type: new GraphQLNonNull(GraphQLString)},
     price: {type: new GraphQLNonNull(GraphQLString)},
     address: {type: new GraphQLNonNull(GraphQLString)},
+    specification: {type: GraphQLString},
     latitude: {type: new GraphQLNonNull(GraphQLString)},
     longitude: {type: new GraphQLNonNull(GraphQLString)},
-    specification: {type: GraphQLString},
     photos: {type: new GraphQLList(
       new GraphQLNonNull(GraphQLString)
     )}
   },
-  resolve: async (root, args) => {
-    return Ads.findByIdAndUpdate(args.id, args)
-  }
+  resolve: (root, args) => Ads.findByIdAndUpdate(args.id, args)
 }

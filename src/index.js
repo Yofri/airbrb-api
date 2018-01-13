@@ -1,11 +1,10 @@
-import express from 'express'
-import graphqlHTTP from 'express-graphql'
-import {mongoose, connection} from './config'
-import schema from './controllers'
-import cors from 'cors'
-import morgan from 'morgan'
-
-const app = express()
+const app = require('express')()
+const graphqlHTTP = require('express-graphql')
+const {mongoose, connection} = require('./configs')
+const schema = require('./controllers')
+const cors = require('cors')
+const morgan = require('morgan')
+const port = process.env.PORT
 
 app.use(cors())
 app.use('/airbrb', morgan('dev'), graphqlHTTP({
@@ -15,4 +14,4 @@ app.use('/airbrb', morgan('dev'), graphqlHTTP({
 
 connection.on('error', () => console.log('Error connecting to database'))
 connection.once('open', () => console.log('Connected to database'))
-app.listen(3001, () => console.log('Express listening on port 3001'))
+app.listen(port, () => console.log(`Express listening on port ${port}`))

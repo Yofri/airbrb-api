@@ -11,18 +11,16 @@ export default {
     password: {type: new GraphQLNonNull(GraphQLString)}
   },
   resolve: async (root, {email, password}) => {
-    const user = await User.find({email})
-    if (!user.length) return {msg: 'Email not found.'}
+    const user = await User.findOne({email})
+    if (!user) return {msg: 'Email not found.'}
 
-    const valid = await bcrypt.compare(password, user[0].password)
+    const valid = await bcrypt.compare(password, user.password)
     if (!valid) return {msg: 'Wrong password.'}
 
-    const payload = {
-      id: user[0]._id,
-      email: user[0].email
-    }
-
-    const token = jwt.sign(payload, process.env.JWT_KEY)
-    return Object.assign(user[0], {token})
+    const token = jwt.sign({
+      id: user._id,
+      email: user.email
+    }, process.env.JWT_KEY)
+    return Object.assign(user, {token})
   }
 }

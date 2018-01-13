@@ -1,3 +1,3 @@
-import getProjection from './projection'
+const getProjection = require('./projection')
 
-export {getProjection}
+module.exports = {getProjection}

@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
-export default mongoose.model('ads', {
+module.exports = mongoose.model('ads', {
   uid: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'users',

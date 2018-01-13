@@ -6,7 +6,5 @@ export default {
   type: new GraphQLNonNull(
     new GraphQLList(new GraphQLNonNull(UserType))
   ),
-  resolve: async () => {
-    return await User.find()
-  }
+  resolve: () => User.find()
 }

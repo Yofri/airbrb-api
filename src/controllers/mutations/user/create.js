@@ -15,11 +15,10 @@ export default {
   resolve: async (root, args) => {
     args.password = await bcrypt.hash(args.password, 8)
     const user = await User.create(args)
-    const payload = {
+    const token = jwt.sign({
       id: user._id,
       email: user.email
-    }
-    const token = jwt.sign(payload, process.env.JWT_KEY)
+    }, process.env.JWT_KEY)
     return Object.assign(user, {token})
   }
 }

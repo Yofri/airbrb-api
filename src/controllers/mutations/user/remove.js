@@ -7,7 +7,5 @@ export default {
   args: {
     id: {type: new GraphQLNonNull(GraphQLID)}
   },
-  resolve: async (root, {id}) => {
-    return await User.findByIdAndRemove(id)
-  }
+  resolve: (root, {id}) => User.findByIdAndRemove(id)
 }

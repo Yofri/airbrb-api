@@ -6,8 +6,8 @@ import {
   GraphQLList,
   GraphQLString
 } from 'graphql'
-import {AdsType} from './'
 import {Ads} from '../../models'
+import {AdsType} from './'
 
 export default new GraphQLObjectType({
   name: 'User',
@@ -18,18 +18,9 @@ export default new GraphQLObjectType({
     email: {type: new GraphQLNonNull(GraphQLString)},
     password: {type: new GraphQLNonNull(GraphQLString)},
     token: {type: GraphQLString},
-    total: {
-      type: GraphQLInt,
-      resolve: async root => {
-        const ads = await Ads.find({uid: root._id})
-        return ads.length
-      }
-    },
     ads: {
       type: new GraphQLList(AdsType),
-      resolve: async root => {
-        return Ads.find({uid: root._id})
-      }
+      resolve: root => Ads.find({uid: root._id})
     }
   })
 })

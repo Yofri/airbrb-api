@@ -1,4 +1,3 @@
-import gcs from './gcs'
-import multer from './multer'
+const gcs = require('./gcs')
 
-export {gcs, multer}
+module.exports = {gcs}

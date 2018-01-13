@@ -5,8 +5,8 @@ import {
   GraphQLList,
   GraphQLString,
 } from 'graphql'
-import {UserType} from './'
 import {User} from '../../models'
+import {UserType} from './'
 
 export default new GraphQLObjectType({
   name: 'Ads',
@@ -24,10 +24,7 @@ export default new GraphQLObjectType({
     )},
     user: {
       type: new GraphQLNonNull(UserType),
-      resolve: async root => {
-        const user = await User.find({_id: root.uid})
-        return user[0]
-      }
+      resolve: root => User.findOne({_id: root.uid})
     }
   })
 })

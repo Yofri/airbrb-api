@@ -7,7 +7,5 @@ export default {
   args: {
     id: {type: new GraphQLNonNull(GraphQLID)}
   },
-  resolve: async (root, {id}) => {
-    return await Ads.findByIdAndRemove(id)
-  }
+  resolve: (root, {id}) => Ads.findByIdAndRemove(id)
 }

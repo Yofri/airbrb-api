@@ -8,8 +8,8 @@ export default {
   args: {
     id: {type: new GraphQLNonNull(GraphQLID)}
   },
-  resolve: async (root, {id}, _, fieldASTs) => {
+  resolve: (root, {id}, _, fieldASTs) => {
     const projection = getProjection(fieldASTs)
-    return await User.findById(id).select(projection)
+    return User.findById(id).select(projection)
   }
 }

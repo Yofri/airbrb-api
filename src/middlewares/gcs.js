@@ -1,10 +1,10 @@
-import Storage from '@google-cloud/storage'
+const Storage = require('@google-cloud/storage')
 
+const bucketName = process.env.BUCKET_NAME
 const storage = Storage({
   projectId: process.env.PROJECT_ID,
   keyFilename: process.env.KEYFILE_PATH,
 })
-const bucketName = process.env.BUCKET_NAME
 
 const getPublicUrl = filename => {
   return `https://storage.googleapis.com/${bucketName}/userupload/${filename}`
@@ -30,21 +30,19 @@ function upload(photoObj) {
 
 function decodeBase64Image(dataString) {
   const matches = dataString.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/)
-  const response = {}
 
   if (matches.length !== 3) {
-    return new Error('Invalid input string');
+    return new Error('Invalid input string')
   }
 
-  response.mimetype = matches[1];
-  response.buffer = Buffer.from(matches[2], 'base64');
-  return response;
+  return {
+    mimetype: matches[1],
+    buffer: Buffer.from(matches[2], 'base64')
+  }
 }
 
 module.exports = photos => {
   return Promise.all(
-    photos.map(photo => upload(
-      decodeBase64Image(photo)
-    ))
+    photos.map(photo => upload(decodeBase64Image(photo)))
   )
 }

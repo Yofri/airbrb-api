@@ -1,4 +1,4 @@
-import User from './user'
-import Ads from './ads'
+const User = require('./user')
+const Ads = require('./ads')
 
-export {User, Ads}
+module.exports = {User, Ads}
